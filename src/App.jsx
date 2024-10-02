@@ -105,8 +105,8 @@ const App = () => {
   };
 
   return (
-    <div className="flex items-center justify-center min-h-screen bg-gray-900">
-      <div className="max-w-xl w-full p-6 bg-gray-800 rounded-lg shadow-lg border-4 border-red-600 glow-effect">
+    <div className="flex items-center justify-center min-h-screen bg-black">
+      <div className="max-w-xl w-full p-7 bg-black rounded-lg shadow-[0_0_50px_rgba(229,57,53,0.9)] border-dashed border-4 border-red-600 shadow-2xl">
         <h1 className="text-2xl font-bold text-center text-white mb-6">CO2 Emission Calculator</h1>
         <div className="bg-gray-700 p-4 rounded-md">
           <div className="mb-4">
@@ -117,7 +117,7 @@ const App = () => {
               onChange={handleStateChange}
               className="w-full p-2 rounded-md border border-gray-600 bg-gray-600 text-white"
             >
-              <option value="">--Select State--</option>
+              <option value="">--Select State--</option> 
               {Object.keys(states).map((state) => (
                 <option key={state} value={state}>
                   {state}
@@ -168,7 +168,7 @@ const App = () => {
           </div>
 
           <div className="mb-4">
-            <label className="block text-white mb-2" htmlFor="members">Number of Family Members:</label>
+            <label className="block text-white mb-2" htmlFor="members">Number of Workers:</label>
             <input
               type="number"
               value={members}
@@ -178,7 +178,7 @@ const App = () => {
           </div>
 
           <button
-            className="w-full py-2 rounded-md bg-orange-500 text-white hover:bg-orange-400 transition duration-300"
+            className="w-full py-2 rounded-md bg-red-600 text-white hover:bg-red-600 transition duration-300"
             onClick={calculateEmission}
           >
             Calculate
